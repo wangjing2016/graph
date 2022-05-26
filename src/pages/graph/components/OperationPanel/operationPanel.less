@@ -1,0 +1,85 @@
+.panel-wrapper {
+  position: fixed;
+  top: 20px;
+  right: 40%;
+  .icon-wrapper {
+    display: inline-flex;
+    padding: 10px;
+    color: aqua;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    line-height: 1;
+    background: url(../../../../icons/images/icon-bk.png) no-repeat;
+    background-size: contain;
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  .trangle-wrapper {
+    position: relative;
+    width: 20px;
+    height: 10px;
+    overflow: hidden;
+    z-index: 11;
+    top: 1px;
+    left: 8px;
+  }
+  .trangle {
+    position: absolute;
+    top: 4px;
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    background-color: #031032;
+    border: 1px solid #11637c;
+    box-shadow: 0 0 10px 2px #11637c inset;
+  }
+  .add-node-wrapper {
+    position: relative;
+    z-index: 10;
+    left: -100px;
+    height: 80px;
+    background-color: #031032;
+    border: 1px solid #11637c;
+    border-radius: 4px;
+    box-shadow: 0 0 12px 4px #11637c inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+
+    .add-node {
+      display: inline-block;
+      width: 60px;
+      height: 46px;
+      line-height: 40px;
+      background: url(../../../../icons/images/addnode-bk.png) no-repeat;
+      background-size: contain;
+      color: #fff;
+      font-weight: 400;
+      text-shadow: 0 1px 3px #fff;
+      text-align: center;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .add-node:last-child {
+      margin-right: 0;
+    }
+  }
+  .lock {
+    cursor: not-allowed;
+    color: #3b5858;
+  }
+}
+.custom-class {
+  background-color: rgba(15, 46, 123, 0.3);
+  color: #ccc;
+  box-shadow: 0 0 12px 4px #11637c;
+  border-radius: 8px;
+  .ant-notification-notice-message {
+    color: #ccc;
+  }
+  .ant-notification-notice-close {
+    color: #ccc;
+  }
+}

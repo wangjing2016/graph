@@ -1,0 +1,86 @@
+{
+  "id": "3422046",
+  "name": "shudu",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "22019958",
+      "name": "开锁",
+      "font_class": "34_kaisuo",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "521050",
+      "name": "添加",
+      "font_class": "tianjia1",
+      "unicode": "e61f",
+      "unicode_decimal": 58911
+    },
+    {
+      "icon_id": "6616853",
+      "name": "备注",
+      "font_class": "beizhu",
+      "unicode": "e679",
+      "unicode_decimal": 59001
+    },
+    {
+      "icon_id": "7726901",
+      "name": "icon-断开连接",
+      "font_class": "icon-duankailianjie",
+      "unicode": "e835",
+      "unicode_decimal": 59445
+    },
+    {
+      "icon_id": "11882868",
+      "name": "bg-unlock",
+      "font_class": "bg-unlock",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "13625329",
+      "name": "锁定",
+      "font_class": "suoding",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "18496204",
+      "name": "快照",
+      "font_class": "kuaizhao",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "19254963",
+      "name": "分 享01",
+      "font_class": "fenxiang01",
+      "unicode": "e6d1",
+      "unicode_decimal": 59089
+    },
+    {
+      "icon_id": "19663527",
+      "name": "分享",
+      "font_class": "share",
+      "unicode": "e664",
+      "unicode_decimal": 58980
+    },
+    {
+      "icon_id": "24268604",
+      "name": "添加",
+      "font_class": "tianjia",
+      "unicode": "e6f4",
+      "unicode_decimal": 59124
+    },
+    {
+      "icon_id": "24379198",
+      "name": "链接",
+      "font_class": "lianjie",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    }
+  ]
+}
