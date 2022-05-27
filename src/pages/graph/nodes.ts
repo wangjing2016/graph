@@ -67,15 +67,20 @@ function setHighlightState(
     }
   }
   if (name === 'hoverlight') {
+    console.log('shape', shape);
     if (value === true) {
       shape.attr({
         img: model?.imgHoverlight,
         opacity: 1,
+        width: 40,
+        height: 40,
       });
     } else {
       shape.attr({
         img: model?.img,
         opacity: 1,
+        width: 35,
+        height: 35,
       });
     }
   }
@@ -84,11 +89,15 @@ function setHighlightState(
       shape.attr({
         img: model?.imgHighlight,
         opacity: 1,
+        width: 40,
+        height: 40,
       });
     } else {
       shape.attr({
         img: model?.img,
         opacity: 1,
+        width: 35,
+        height: 35,
       });
     }
   }
@@ -107,6 +116,61 @@ function setHighlightState(
     }
   }
 }
+
+const lineDash = [4, 2, 1, 2];
+export const registerEdge = () => {
+  G6.registerEdge(
+    'can-running',
+    {
+      setState(name, value, item) {
+        const shape = item?.get('keyShape');
+        if (name === 'hoverlight') {
+          if (value) {
+            shape.attr('stroke', '#a16027');
+          } else {
+            shape.attr('stroke', '#223b74');
+          }
+        }
+        if (name === 'dark') {
+          if (value) {
+            shape.attr('stroke', '#0c1f4c');
+          } else {
+            shape.attr('stroke', '#223b74');
+          }
+        }
+        if (name === 'highlight') {
+          if (value) {
+            let index = 0;
+            shape.attr('stroke', 'green');
+            shape.animate(
+              () => {
+                index++;
+                if (index > 9) {
+                  index = 0;
+                }
+                const res = {
+                  lineDash,
+                  lineDashOffset: -index,
+                };
+                // return the params for this frame
+                return res;
+              },
+              {
+                repeat: true,
+                duration: 3000,
+              },
+            );
+          } else {
+            shape.stopAnimate();
+            shape.attr('lineDash', null);
+            shape.attr('stroke', '#223b74');
+          }
+        }
+      },
+    },
+    'line',
+  );
+};
 export const registerNode = () => {
   G6.registerNode(
     'image-nodes',

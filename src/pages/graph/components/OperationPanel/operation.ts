@@ -24,8 +24,13 @@ function addNode(graph: any, model: any, e: any) {
   formatNodes([modelObj], 'image-nodes');
   let { x, y } = e;
   let nodeModel = Object.assign({ ...modelObj }, { x, y });
-  let nodeItem = graph.addItem('node', nodeModel);
-  graph.setItemState(nodeItem, 'selected', true);
+  graph.addItem('node', nodeModel);
+
+  let nodeItem = graph.findById(nodeModel.id) || {};
+  setTimeout(() => {
+    graph.setItemState(nodeItem, 'selected', true);
+    graph.layout();
+  });
 }
 function addEdge(graph: any) {
   //获取选中状态下的节点进行连线

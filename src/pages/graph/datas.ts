@@ -5,7 +5,7 @@ export default {
     { id: '3', label: '交换机', nodeType: 'switch' },
     { id: '4', label: '域名', nodeType: 'domain' },
     { id: '5', label: '域名', nodeType: 'domain' },
-    { id: '11', label: '人', nodeType: 'person' },
+    /*{ id: '11', label: '人', nodeType: 'person' },
     { id: '12', label: '人', nodeType: 'person' },
     { id: '13', label: '人', nodeType: 'person' },
     { id: '14', label: '人', nodeType: 'person' },
@@ -424,7 +424,7 @@ export default {
     { id: '10396', label: 'person', nodeType: 'person' },
     { id: '10397', label: 'printer', nodeType: 'printer' },
     { id: '10398', label: 'person', nodeType: 'person' },
-    { id: '10399', label: 'printer', nodeType: 'printer' },
+    { id: '10399', label: 'printer', nodeType: 'printer' },*/
   ],
   edges: [
     { source: '1', target: '2' },
@@ -432,7 +432,7 @@ export default {
     { source: '1', target: '4' },
     { source: '1', target: '5' },
     { source: '1', target: '6' },
-    { source: '1', target: '11' },
+    /*{ source: '1', target: '11' },
     { source: '1', target: '12' },
     { source: '1', target: '13' },
     { source: '1', target: '14' },
@@ -899,6 +899,6 @@ export default {
     { source: '10038', target: '10399' },
     { source: '10038', target: '10039' },
     { source: '10036', target: '10039' },
-    { source: '10036', target: '10038' },
+    { source: '10036', target: '10038' },*/
   ],
 };

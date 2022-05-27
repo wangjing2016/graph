@@ -76,6 +76,9 @@ function OperationPanel() {
     );
     //setAddContainer(false);
   }
+  function imgSrc(type: string) {
+    return require(`@/icons/node-icons/${type}.png`);
+  }
   return (
     <div className="panel-wrapper">
       <span
@@ -135,18 +138,30 @@ function OperationPanel() {
           </div>
           <div className="add-node-wrapper">
             {nodeTypeList.map((type) => (
-              <span
-                className="add-node"
-                draggable="true"
-                onDragStart={(e) => {
-                  dragStartHandler(e, type.type);
-                }}
-                key={type.type}
-                onClick={() => {
-                  addNodeHandler(type.type);
-                }}
-              >
-                {type.label}
+              //   <span
+              //     className="add-node"
+              //     draggable="true"
+              //     onDragStart={(e) => {
+              //       dragStartHandler(e, type.type);
+              //     }}
+              //     key={type.type}
+              //     onClick={() => {
+              //       addNodeHandler(type.type);
+              //     }}
+              //   >
+              //     {type.label}
+              //   </span>
+              <span className="add-node" key={type.type}>
+                <img
+                  src={imgSrc(type.type)}
+                  width={40}
+                  height={40}
+                  draggable="true"
+                  onDragStart={(e) => {
+                    dragStartHandler(e, type.type);
+                  }}
+                />
+                <span>{type.label}</span>
               </span>
             ))}
           </div>

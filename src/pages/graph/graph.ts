@@ -1,7 +1,7 @@
 import { G6, Graph } from '@antv/graphin';
 import datas from './datas';
 import { setHoverHighlight, setHoverHighlightWithExclueds } from './hoverlight';
-import { registerNode, formatNodes } from './nodes';
+import { registerNode, formatNodes, registerEdge } from './nodes';
 import {
   refreshDragedNodePosition,
   clearAllStats,
@@ -106,6 +106,8 @@ function graphCreater(container: HTMLElement) {
 
   // #自定义节点类型
   registerNode();
+  //#自定义边类型
+  registerEdge();
 
   // #初始化节点数据
   let { nodes, edges } = datas;
@@ -116,6 +118,7 @@ function graphCreater(container: HTMLElement) {
     nodes,
     edges: edges.map(function (edge: any, i) {
       edge.id = 'edge' + i;
+      edge.type = 'can-running';
       return Object.assign({}, edge);
     }),
   });
@@ -132,7 +135,7 @@ function graphCreater(container: HTMLElement) {
     nodes: [],
     edges: [],
   };
-  setTimeout(() => {
+  /*setTimeout(() => {
     setPathHighlight(graph, htpath, '10138');
     setTimeout(() => {
       setPathHighlight(graph, htpath, '10029');
@@ -144,7 +147,7 @@ function graphCreater(container: HTMLElement) {
         }, 12000);
       }, 6000);
     }, 6000);
-  }, 8000);
+  }, 8000);*/
   // 被拖拽的元素在目标元素上同时鼠标放开触发的事件
   graph.on('drop', function (e: any) {
     const { originalEvent } = e;
